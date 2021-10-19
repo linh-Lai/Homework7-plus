@@ -2,26 +2,24 @@
 font-family: arial, sans-serif;
 }
 
-
 h1{
 color: #0b5ed7;
 font-size: 50px;
 font-weight: 500;
 line-height: 48px;
 margin-top: 50px;
-
 }
 
 #temperature{
  color: #0b5ed7; 
 }
+
 ul{
     margin: 0;
     padding:0;
 }
 ul ::first-letter{
 text-transform: capitalize;
-
 }
 
 
@@ -39,12 +37,10 @@ line-height: 30px;
 background-image: url("sky.jpeg");
 background-size: cover;
 background-position: center;
-
 margin: 100px ;
-
 }
-.weather-app{
-    
+
+.weather-app{    
     padding: 50px;
     border: 1px solid #dadde1;
     border-radius: 5px;
