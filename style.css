@@ -85,14 +85,23 @@ top:-17px;
 weather-temperature .active:hover{
     text-decoration: none;
 }
-.forecast {
-  position: relative;
-  top: 50px;
-  bottom: 10px;
-  left: 70px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 20px;
+.weather-forecast {
+  
+  margin-top: 20px;
+
+}
+
+.weather-forecast.date {
+  font-size: 16px;
+  opacity: 0.5;
+  color: #000;
+}
+
+.weather-forecast-temp {
+  font-size:13px;
+}
+.weather-forecast-temp-min {
+  opacity: 0.5;
 }
 h3{
     font-size: 50px;
