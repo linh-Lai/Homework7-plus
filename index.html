@@ -10,70 +10,90 @@
   crossorigin="anonymous"/>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="style.css"/>
-  
+
   <title>Weather App</title>
+   
 </head>
+ 
 <body>
-  <div class="container">
+<div class="container">
   <div class="total">
     <div class="weather-app">
       <form id="search-form" id="mb-3">
         <div class="row">
           <div class="col-6">
-<input type="search" 
-placeholder =" Type a city ..."
-class="form-control"
-id="city-input"
-autocomplete="off"/>
-</div>
-<div class="col-3">
-<input type="submit" 
-value="Search"
-class="btn btn-primary"/>
-</div>
-</div>
-      </form>
-      <div class="overview">
-<h1 id="city"></h1>
-<ul class="current-description">
-  <li>Last update: <span id=date></span> </li>
-  <li id="description"></li>
-</ul>
-      </div>
-<div class="row">
-  <div class="col-6">
-    <div class="clearfix weather-temperature">
-<span class="image">
-  <img 
-src="" 
-alt="cloudy" 
-class= "float-left"
-id= "icon"/></span>
-<span class="float-left" >
-   <strong id="temperature"></strong>
-    <span class="units">
-      <small><a href="#" id ="celsius-link" class="active">°C </a>|
-        <a href="#" id="fahrenheit-link">°F</a> </small></span>
+            <input type="search" 
+              placeholder =" Type a city ..."
+              class="form-control"
+              id="city-input"
+              autocomplete="off"/>
+          </div>
+          <div class="col-3">
+            <input type="submit" 
+            value="Search"
+            class="btn btn-primary"/>
+          </div>
+        </div>
+     </form>
     </div>
+    <div class="overview">
+        <h1 id="city"></h1>
+        <div class="current-description">
+          Update: <span id="date"></span> 
+          
+        </div>
+    </div>
+    <div class="row" id="current">
+        <div class="col-6">
+          <div class="clearfix weather-temperature">
+            <div class="icon">
+            <img 
+              src="" 
+              alt="cloudy" 
+              class= "float-left"
+              id= "icon"/>
+            </div>
+            <div class="float-left" id="current-temp" >
+              <strong id="temperature"></strong>
+              <span class="units">
+                <small><a href="#" id ="celsius-link" class="active">°C </a>|
+                      <a href="#" id="fahrenheit-link">°F</a> </small>
+              </span>
+              </br>
+              <span id="description"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <ul>
+           <li> Humidity: <span id="humidity"></span>%</li>
+           <li> Wind: <span id="wind"></span>km/h </li>
+          </ul>
+        </div>
+    </div>
+    <div class="weather-forecast" id="forecast">
+        <div class="row">
+          <div class="col-2">
+            <div class="weather-forecast-date">Thu</div>
+          
+            <img src="http://openweathermap.org/img/wn/01d@2x.png"
+            alt=""
+            width="36"/>
+        <div class="weather-forecast-temp">
+          <span class="weather-forecast-temp-max">18</span>
+          <span class="weather-forecast-temp-min">12</span>
+        </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="owner" id="owner">
+      <a href="https://github.com/linh-Lai/Homework7-plus"
+         target="_blank" > Open-source code</a> by Linh Lai
+    </div> 
   </div>
-<div class="col-6" id="list">
-  <ul>
-    <li>
-      Humidity: <span id="humidity"></span>
-    </li>
-    <li>
-      Wind: <span id="wind"></span>
-    </li>
-  </ul>
 </div>
-<div class="weather-forecast" id="forecast"></div>
-
-<div class="owner" id="owner"><small>
-  <a href="https://github.com/linh-Lai/Homework7-plus"
-  target="_blank" > Open-source code</a> by Linh Lai
-</small>
-</div>
-</div>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
