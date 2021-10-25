@@ -1,5 +1,10 @@
-
+body{
+  background: url("background.jpeg");
+ background-size: cover;
+ background-position: center ;
+}
 .container{
+  
   padding: auto;
   margin: auto;
   max-width: 1000px;
@@ -7,8 +12,8 @@
 }
 
 h1{
-color: #975a5e;
-font-size: 50px;
+color:#625772;
+font-size: 80px;
 font-weight: 500;
 line-height: 48px;
 margin-top: 10px;
@@ -21,6 +26,7 @@ text-align: center;
 
 .current-description{
   text-align: center;
+  color: #625772;
 }
 #current-temp{
  position:relative;
@@ -32,7 +38,8 @@ text-align: center;
 
 
 #temperature{
-  font-size: 50px;
+  font-size: 70px;
+  color:#36626a;
 }
 ul{
     margin: 0;
@@ -58,18 +65,20 @@ line-height: 30px;
 
 .total{    
   max-width: 1000px;
-  margin-block: 200px auto;
-  background-color: #e7b3b3;
-  border: 1.5px solid #000;
+  margin-block: 150px auto;
+
+  border: 1.5px solid #fffdfb;
   border-radius: 5px;
   
+ 
 }
-
 .weather-app{
   position: relative;
   top:-60px;
-  left: 100px;
+  left: 200px;
 }
+
+
 
 
 
