@@ -92,7 +92,7 @@ function displayTemperature(response) {
   let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
-  console.log(response.data);
+  //console.log(response.data);
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   location.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
