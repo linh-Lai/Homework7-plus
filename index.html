@@ -18,6 +18,45 @@
 <body>
 <div class="container">
   <div class="total">
+    
+    <div class="overview">
+        <h1 id="city"></h1>
+        <div class="update-time">
+          Update: <span id="date"></span> 
+        </div>
+    </div>
+    <div class="row" id="current">
+        <div class="col-6">
+          <div class="clearfix weather-temperature">
+            <div class="icon">
+            <img 
+              src="" 
+              alt="cloudy" 
+              class= "float-left"
+              width="250px"
+              id= "icon"/>
+            </div>
+            <div class="float-left" id="current-temp" >
+              <strong id="temperature"></strong>
+              <span class="units">
+                <small><a href="#" id ="celsius-link" class="active">°C </a>|
+                      <a href="#" id="fahrenheit-link">°F</a> </small>
+              </span>
+              <strong><div id="description"></div></strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-6" id="addition">
+          <ul><strong>
+            <li> <span id="max-temp">°|</span> 
+                <span id="min-temp">°</span> </li>
+          <hr/>
+           <li> Humidity: <span id="humidity"></span>%</li>
+          <hr/>
+           <li> Wind: <span id="wind"></span>km/h </li></strong>
+          </ul>
+        </div>
+    </div>
     <div class="weather-app">
       <form id="search-form" id="mb-3">
         <div class="row">
@@ -35,40 +74,6 @@
           </div>
         </div>
      </form>
-    </div>
-    <div class="overview">
-        <h1 id="city"></h1>
-        <div class="current-description">
-          Update: <span id="date"></span> 
-          
-        </div>
-    </div>
-    <div class="row" id="current">
-        <div class="col-6">
-          <div class="clearfix weather-temperature">
-            <div class="icon">
-            <img 
-              src="" 
-              alt="cloudy" 
-              class= "float-left"
-              id= "icon"/>
-            </div>
-            <div class="float-left" id="current-temp" >
-              <strong id="temperature"></strong>
-              <span class="units">
-                <small><a href="#" id ="celsius-link" class="active">°C </a>|
-                      <a href="#" id="fahrenheit-link">°F</a> </small>
-              </span>
-              <div id="description"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <ul>
-           <li> Humidity: <span id="humidity"></span>%</li>
-           <li> Wind: <span id="wind"></span>km/h </li>
-          </ul>
-        </div>
     </div>
     <div class="weather-forecast" id="forecast">
         <div class="row">

@@ -24,7 +24,7 @@ function formatDate(timestamp) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday"];
  return days[day];
 }
 
@@ -38,15 +38,23 @@ function displayForecast(response) {
         forecastHTML +
         `
     <div class="col-2">
-      <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+      <div class="weather-forecast-date"><strong>${formatDay(forecastDay.dt)}</strong></div>
+       <div class="weather-forecast-description"><strong>${forecastDay.weather[0].description}</strong></div>
       <img
-        src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+        src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png"
         alt=""
         width="42"
+        id="weather-forecast-image"
       />
-      <div class="weather-forecast-temp">
-        <span class="weather-forecast-temp-max">${Math.round(forecastDay.temp.max)}°</span>
-        <span class="weather-forecast-temp-min">${Math.round(forecastDay.temp.min)}°</span>
+      <div class="weather-forecast-temp"><strong>
+        <span class="weather-forecast-temp-max">${Math.round(
+          forecastDay.temp.max
+        )}°</span>
+        <span class="weather-forecast-temp-min">${Math.round(
+          forecastDay.temp.min
+        )}°</span></strong>
       </div>
   </div>`;
     }
@@ -77,16 +85,20 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
+  let maxTempElement = document.querySelector("#max-temp") ;
+  let minTempElement = document.querySelector("#min-temp") ;
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
-
+  console.log(response.data);
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   location.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
+  maxTempElement.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
+  minTempElement.innerHTML = `${Math.round(response.data.main.temp_min)}°`;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
